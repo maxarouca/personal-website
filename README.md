@@ -23,7 +23,8 @@
 [![GitHub license](https://img.shields.io/github/license/maxarouca/home?style=for-the-badge)](https://github.com/maxarouca/home/blob/master/LICENSE)
 [![Twitter Follow](https://img.shields.io/twitter/follow/maxarouca?color=ffcc66&logo=twitter&logoColor=ffffff&style=for-the-badge)](https://twitter.com/maxarouca)
 
-[![Site preview](/public/social-image.png)](https://maxarouca.github.io/)
+<!-- [![Site preview](/public/social-image.png)](https://maxarouca.github.io/) -->
+
 
 ## Table of Contents
 
