@@ -11,14 +11,6 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
   const [profilePicUrl, setProfilePicUrl] = React.useState("");
   const [showPic, setShowPic] = React.useState(Boolean(link));
 
-  React.useEffect(() => {
-    if (link && !pictureLinkRegex.test(link)) {
-      handleRequest();
-    } else {
-      setProfilePicUrl(link);
-    }
-  }, [link]);
-
   const handleRequest = async () => {
     const instaLink = "https://www.instagram.com/";
     const instaQuery = "/?__a=1";
@@ -30,6 +22,14 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
       console.error(error.message);
     }
   };
+
+  React.useEffect(() => {
+    if (link && !pictureLinkRegex.test(link)) {
+      handleRequest();
+    } else {
+      setProfilePicUrl(link);
+    }
+  }, [handleRequest, link]);
 
   return (
     <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
@@ -60,7 +60,7 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
                   role="button"
                   aria-label="Resume/CV"
                 >
-                  Resume
+                  Curriculo
                 </a>
               </p>
             )}
